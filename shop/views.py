@@ -18,6 +18,9 @@ def product_detail(request,id,slug):
     product = get_object_or_404(Product,id = id, slug=slug,available=True)
     return render(request,'shop/product/product_detail',{'product':product})
 
+def home(request):
+    return render(request,'shop/base.html')
+
 
 
 

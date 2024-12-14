@@ -1,0 +1,32 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Products
+    {% endif %}
+{% endblock %}
+
+{% block categories %}
+
+        {% if not category %}
+            class="selected"
+        {% endif %}
+        <a href="{% url 'shop:product-list' %}" class="nav-item nav-link">All</a>
+    
+        {% for c in categories %}
+        
+            <a href="{{c.get_absolute_url}}" class="nav-item nav-link">{{c.name}}</a>
+        
+
+        {% endfor %}
+                
+{% endblock %}
+
+{% block content %}
+    <!-- Side bar start -->
+    
+    <!-- Shop Sidebar End -->
+{% endblock %}

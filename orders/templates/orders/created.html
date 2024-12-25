@@ -1,0 +1,14 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}Thank You{% endblock %}
+
+{% block content%}
+<div class="row">
+    <div class="col-6">
+        <p>Thank You for placing an order, Your Order ID is <strong>{{ order.id }}</strong></p>
+    </div>
+
+</div>
+
+{% endblock %}
